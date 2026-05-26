@@ -26,7 +26,7 @@
           <p class="eyebrow">AI/Data Engineer</p>
           <h1 id="hero-title">Production systems from real-world data to automated decisions.</h1>
           <p class="hero-text">
-            I build data ingestion, ML inference, backend automation, monitoring, and delivery
+            I build agent workflows, data ingestion, ML inference, backend automation, monitoring, and delivery
             workflows that operate beyond notebooks: APIs, schedulers, logs, risk controls,
             runtime separation, and deployment-ready services.
           </p>
@@ -70,8 +70,36 @@
       <section id="systems" class="section" aria-labelledby="systems-title">
         <div class="section-heading">
           <p class="eyebrow">Featured Systems</p>
-          <h2 id="systems-title">Two production-oriented case studies</h2>
+          <h2 id="systems-title">Three production-oriented case studies</h2>
         </div>
+
+        <article class="project">
+          <div class="project-main">
+            <p class="project-label">AI agents / reliability harness</p>
+            <h3>Equity Research Agent Harness</h3>
+            <p>
+              LangGraph-based research-agent harness that turns a US stock ticker into an
+              auditable equity research memo, with typed data collection, evidence packaging,
+              grounding verification, compliance checks, and local traces designed for replay and
+              evaluation.
+            </p>
+            <ul>
+              <li>Built an explicit graph workflow from ticker validation through data collection, thesis construction, memo drafting, grounding, compliance, and finalization.</li>
+              <li>Implemented typed tools for company profile, market data, SEC filing facts, and news or soft-signal collection.</li>
+              <li>Separated human-readable memo output from structured intermediate state so evaluators can inspect agent behavior without parsing only Markdown.</li>
+              <li>Kept the MVP non-personalized and deterministic before adding live LLM calls, making reliability tests repeatable.</li>
+            </ul>
+          </div>
+          <div class="project-evidence">
+            <h4>Evidence</h4>
+            <dl>
+              <div><dt>Runtime</dt><dd>LangGraph workflow with explicit nodes and typed state</dd></div>
+              <div><dt>Data tools</dt><dd>yfinance-ready market data, SEC facts, company profile, news stub</dd></div>
+              <div><dt>Controls</dt><dd>Grounding verifier, compliance gate, controlled research-view enum</dd></div>
+              <div><dt>Tests</dt><dd>Workflow and tool tests for grounded, compliant memo generation</dd></div>
+            </dl>
+          </div>
+        </article>
 
         <article class="project">
           <div class="project-main">
@@ -135,7 +163,8 @@
           <h2 id="capabilities-title">Engineering strengths backed by working systems</h2>
         </div>
         <div class="capability-grid">
-          <div><span>Data ingestion</span><p>Weather/METAR/TAF ingestion and congressional trade pipelines.</p></div>
+          <div><span>Agent workflows</span><p>LangGraph research flow with typed state, grounding, compliance, and replayable traces.</p></div>
+          <div><span>Data ingestion</span><p>Weather/METAR/TAF ingestion, market data tools, SEC facts, and congressional trade pipelines.</p></div>
           <div><span>ML serving</span><p><code>snapshot_v3</code> inference and AutoGluon prediction APIs.</p></div>
           <div><span>MLOps</span><p>DVC, MLflow, model artifacts, and training/serving alignment.</p></div>
           <div><span>Backend systems</span><p>FastAPI services, readiness checks, PostgreSQL-backed logging.</p></div>
